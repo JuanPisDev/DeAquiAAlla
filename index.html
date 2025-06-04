@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Aquí A Allá</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Leaflet Routing Machine CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    <!-- Leaflet Routing Machine JavaScript -->
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+</head>
+<body>
+    <header>
+        <h1>De Aquí A Allá</h1>
+        <h3>(Consumo de Gasolina para Motos)</h3>
+    </header>
+    <main>
+        <section class="calculator">
+            <div id="map" style="height: 400px;"></div>
+
+            <h2>Calcula el Consumo de Gasolina</h2>
+            <form id="gasolineForm">
+                <label for="searchModel">Buscar modelo de moto:</label>
+                <input type="text" id="searchModel" placeholder="Buscar...">
+                
+                <label for="motorcycleModel">Selecciona la moto:</label>
+                <select id="motorcycleModel" name="motorcycleModel" required>
+                    <!-- Opciones de motos generadas dinámicamente -->
+                </select>
+
+                <button type="submit">Calcular Consumo</button>
+                <button type="button" id="resetRoute">Hacer otra ruta</button>
+            </form>
+        </section>
+
+        <section class="results" id="resultsSection">
+            <!-- Aquí se mostrarán los resultados del cálculo -->
+            <h2>Resultados:</h2>
+            <div id="consumptionResults">
+                <p>Ubicación de inicio: <span id="startLocationResult"></span></p>
+                <p>Ubicación de destino: <span id="endLocationResult"></span></p>
+                <p>Distancia: <span id="distanceResult"></span> km</p>
+                <p>Consumo: <span id="consumptionResult"></span> litros</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 De Aquí A Allá</p>
+    </footer>
+    <script src="../JS/script.js"></script>
+</body>
+</html>
